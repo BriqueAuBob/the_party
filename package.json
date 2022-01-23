@@ -1,0 +1,20 @@
+{
+  "name": "swazox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:tailwind-dev": "npx cross-env postcss src/style.css -o assets/css/style.css",
+    "build:tailwind-prod": "npx cross-env NODE_ENV=production postcss src/style.css -o assets/css/style.css",
+    "prestart": "npm run build:tailwind-dev",
+    "prebuild": "npm run build:tailwind-prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.15"
+  }
+}
